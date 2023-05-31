@@ -1,0 +1,49 @@
+---
+title: "README"
+author: "Jonas Roettger"
+date: "2023-05-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## README
+Human Activity Recognition Using Smartphones Data Set
+This repository contains R code that performs analysis on the Human Activity Recognition dataset. This dataset represents data collected from the accelerometers from the Samsung Galaxy S smartphone.
+
+Dataset
+The dataset can be downloaded from the following link:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+A full description of the data is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Files
+The code takes for granted that all the necessary files, un-compressed and in a default folder structure, are in the working directory.
+
+run_analysis.R contains all the code to perform the analyses described in the project's assignment. The output of the script is a text file called TidyData.txt.
+
+How the script works
+The R script, run_analysis.R, does the following:
+
+Downloads the dataset from the web if it does not already exist in the working directory.
+Loads the activity and feature info.
+Loads both the training and test datasets, keeping only those columns which reflect a mean or standard deviation.
+Loads the activity and subject data for each dataset, and merges those columns with the dataset.
+Merges the two datasets.
+Converts the activity and subject columns into factors.
+Creates a tidy dataset that consists of the mean value of each variable for each subject and activity pair.
+The end result is shown in the file TidyData.txt.
+Dependencies
+run_analysis.R is dependent on the dplyr package. If this package is not installed, the script will not run. You can install this package using install.packages("dplyr").
+
+
+
+
+
+
+
